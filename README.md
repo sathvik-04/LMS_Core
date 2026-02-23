@@ -1,6 +1,6 @@
 # 🎓 LMS Core — Learning Management System
 
-A full-featured **Learning Management System** built with the **MERN stack** (MongoDB, Express.js, React, Node.js). Supports course creation, enrollment, payments, quizzes, and admin management — all in a responsive, modern UI powered by the **Aduca Bootstrap Theme**.
+A full-featured **Learning Management System** built with the **MERN stack** (MongoDB, Express.js, React, Node.js). Supports course creation, enrollment, payments, quizzes, and admin management — all in a responsive, modern UI.
 
 ---
 
@@ -228,11 +228,6 @@ The app will be available at:
 
 ---
 
-## 📄 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
 
 ## 👤 Author
 
