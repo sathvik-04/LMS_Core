@@ -1,0 +1,623 @@
+/* ===================================================================
+   YouTubeLMS — Custom CSS (supplements Aduca Bootstrap theme)
+   Only styles NOT provided by Bootstrap + style.css go here.
+   =================================================================== */
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+/* ── Dashboard Layout ── */
+.dashboard {
+  display: flex;
+  min-height: calc(100vh - 160px);
+}
+
+.dashboard .sidebar {
+  width: 260px;
+  background: #fff;
+  border-right: 1px solid #eee;
+  padding: 24px 0;
+  position: sticky;
+  top: 0;
+  height: calc(100vh - 160px);
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.dashboard .sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard .sidebar-item {
+  margin-bottom: 2px;
+}
+
+.dashboard .sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  text-decoration: none;
+}
+
+.dashboard .sidebar-link:hover {
+  color: #333;
+  background: #f8f9fa;
+}
+
+.dashboard .sidebar-link.active {
+  color: #7b68ee;
+  background: rgba(123, 104, 238, 0.08);
+  border-left-color: #7b68ee;
+}
+
+.dashboard .sidebar-link svg {
+  font-size: 18px;
+}
+
+.dashboard .sidebar-heading {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #999;
+  padding: 20px 24px 8px;
+}
+
+.dashboard .dashboard-content {
+  flex: 1;
+  padding: 32px;
+  max-width: calc(100% - 260px);
+}
+
+@media (max-width: 768px) {
+  .dashboard .sidebar {
+    display: none;
+  }
+
+  .dashboard .dashboard-content {
+    max-width: 100%;
+    padding: 16px;
+  }
+}
+
+/* ── Dashboard Stat Cards ── */
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card-label {
+  font-size: 12px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.stat-card-value {
+  font-size: 28px;
+  font-weight: 800;
+  color: #333;
+}
+
+.stat-card-change {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.stat-card-change.up {
+  color: #22c55e;
+}
+
+.stat-card-change.down {
+  color: #ef4444;
+}
+
+/* ── Dashboard Tables ── */
+.dashboard .table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard thead {
+  background: #f8f9fa;
+}
+
+.dashboard th {
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #999;
+  border-bottom: 1px solid #eee;
+}
+
+.dashboard td {
+  padding: 14px 16px;
+  font-size: 14px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.dashboard tbody tr:hover {
+  background: #f8f9fa;
+}
+
+/* ── Dashboard Badges ── */
+.dashboard .badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-primary {
+  background: rgba(123, 104, 238, 0.12);
+  color: #7b68ee;
+}
+
+.badge-success {
+  background: rgba(34, 197, 94, 0.12);
+  color: #22c55e;
+}
+
+.badge-warning {
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+}
+
+.badge-error {
+  background: rgba(239, 68, 68, 0.12);
+  color: #ef4444;
+}
+
+.badge-info {
+  background: rgba(6, 182, 212, 0.12);
+  color: #06b6d4;
+}
+
+/* ── Dashboard Page Header ── */
+.dashboard .page-header {
+  margin-bottom: 32px;
+}
+
+.dashboard .page-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.dashboard .page-subtitle {
+  color: #666;
+  font-size: 14px;
+}
+
+/* ── Dashboard Tabs ── */
+.dashboard .tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 24px;
+  overflow-x: auto;
+}
+
+.dashboard .tab {
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #999;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.dashboard .tab:hover {
+  color: #666;
+}
+
+.dashboard .tab.active {
+  color: #7b68ee;
+  border-bottom-color: #7b68ee;
+}
+
+/* ── Dashboard Empty State ── */
+.dashboard .empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+}
+
+.dashboard .empty-state-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.dashboard .empty-state-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #666;
+}
+
+/* ── Dashboard Progress Bar ── */
+.progress-bar-custom {
+  height: 6px;
+  background: #eee;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar-custom-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #7b68ee, #06b6d4);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+/* ── Modal (shared) ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-custom {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 520px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Dashboard Button Overrides ── */
+.dashboard .btn-primary {
+  background: linear-gradient(135deg, #7b68ee, #06b6d4);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dashboard .btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(123, 104, 238, 0.3);
+}
+
+.dashboard .btn-secondary {
+  background: #f8f9fa;
+  color: #333;
+  border: 1px solid #eee;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dashboard .btn-secondary:hover {
+  background: #eee;
+}
+
+.dashboard .btn-danger {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dashboard .btn-sm {
+  padding: 6px 14px;
+  font-size: 13px;
+}
+
+.dashboard .btn-block {
+  width: 100%;
+}
+
+.dashboard .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Dashboard Form Controls ── */
+.dashboard .form-group {
+  margin-bottom: 20px;
+}
+
+.dashboard .form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dashboard .form-input,
+.dashboard .form-select,
+.dashboard .form-textarea {
+  width: 100%;
+  padding: 10px 14px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  color: #333;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.dashboard .form-input:focus,
+.dashboard .form-select:focus,
+.dashboard .form-textarea:focus {
+  outline: none;
+  border-color: #7b68ee;
+  box-shadow: 0 0 0 3px rgba(123, 104, 238, 0.15);
+}
+
+.dashboard .form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ── Dashboard Alert ── */
+.dashboard .alert {
+  padding: 14px 18px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboard .alert-success {
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  color: #16a34a;
+}
+
+.dashboard .alert-error {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #dc2626;
+}
+
+.dashboard .alert-warning {
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  color: #d97706;
+}
+
+/* ── Spinner / Loading ── */
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #eee;
+  border-top-color: #7b68ee;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 40px auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+/* ── Toastify Overrides ── */
+.Toastify__toast {
+  border-radius: 6px !important;
+}
+
+/* ── Dashboard Grid ── */
+.dashboard .grid {
+  display: grid;
+  gap: 24px;
+}
+
+.dashboard .grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.dashboard .grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.dashboard .grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .dashboard .grid-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .dashboard .grid-3,
+  .dashboard .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .dashboard .grid-2,
+  .dashboard .grid-3,
+  .dashboard .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Dashboard Stars ── */
+.dashboard .stars {
+  display: flex;
+  gap: 2px;
+  color: #f59e0b;
+}
+
+.dashboard .stars .empty {
+  color: #ddd;
+}
+
+/* ── Dashboard Pagination ── */
+.dashboard .pagination {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 32px;
+}
+
+.dashboard .pagination-btn {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background: #fff;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dashboard .pagination-btn:hover,
+.dashboard .pagination-btn.active {
+  background: #7b68ee;
+  color: #fff;
+  border-color: #7b68ee;
+}
+
+/* ── Cart Page (old dark theme items used via inline) ── */
+.cart-summary-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
